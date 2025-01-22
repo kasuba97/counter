@@ -28,7 +28,7 @@ public fun increment(counter:&mut Counter){
 
 /// decrements count in users account
 public fun decrement(counter:&mut Counter){
-    assert!(counter.value == 0,EValueAlreadyAtZero);
+    assert!(!counter.value == 0,EValueAlreadyAtZero);
     counter.value = counter.value-1;
 }
 
